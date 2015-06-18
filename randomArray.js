@@ -1,5 +1,8 @@
 var messages = ["Good!", "Great!", "Awesome!", "Super!", "Nice!"];
-function getMessage() {
-   return messages[Math.floor(Math.random() * messages.length)];
-}
-console.log(getMessage());
+
+$("#button").on("click", function(){
+  var getMessage = function() {
+     return messages[Math.floor(Math.random() * messages.length)];
+  }
+  $("#message").text(getMessage);
+});
